@@ -1,0 +1,251 @@
+1
+00:00:00,440 --> 00:00:06,170
+Another concept that is important to understand for the way we're going to create data structures is
+
+2
+00:00:06,170 --> 00:00:08,120
+the concept of pointers.
+
+3
+00:00:08,990 --> 00:00:15,140
+And to explain this, I'm going to start with something that is not a pointer and then compare it to
+
+4
+00:00:15,140 --> 00:00:17,230
+something that does use a pointer.
+
+5
+00:00:18,080 --> 00:00:24,560
+So we're going to have a variable, number one, and we're going to set it equal to 11 and then we'll
+
+6
+00:00:24,560 --> 00:00:26,450
+have another variable NUM two.
+
+7
+00:00:26,780 --> 00:00:33,680
+And we're going to set this equal to number one, which obviously makes Numata equal to 11.
+
+8
+00:00:34,990 --> 00:00:40,900
+Now, to see how something that is not a pointer works, let's flip over to VSG code.
+
+9
+00:00:42,070 --> 00:00:46,960
+OK, so up here, we have someone equal to 11 and number two, equal to number one, and then we're
+
+10
+00:00:46,960 --> 00:00:49,690
+just going to print these out.
+
+11
+00:00:50,500 --> 00:00:51,550
+So I'll run this.
+
+12
+00:00:52,410 --> 00:00:57,030
+And we have before the value is updated, number one is 11 and number two is 11.
+
+13
+00:00:58,040 --> 00:00:59,720
+Now I'm going to paste in some new code.
+
+14
+00:01:00,850 --> 00:01:05,320
+And all we're going to do here is set Namwon equal to 22.
+
+15
+00:01:06,230 --> 00:01:08,210
+And then we're going to print this out again.
+
+16
+00:01:09,740 --> 00:01:17,380
+OK, so he can see over here after value was updated, no one is now 22, but number two is still 11.
+
+17
+00:01:18,150 --> 00:01:19,550
+OK, so let's flip back.
+
+18
+00:01:20,930 --> 00:01:27,740
+So when you set numb to equal to number one, these are not linked forever, you are just initializing
+
+19
+00:01:27,740 --> 00:01:30,800
+them to with the value of no one at the time.
+
+20
+00:01:30,800 --> 00:01:36,590
+If you change them, one number two stays with the value that it was initialized with.
+
+21
+00:01:37,250 --> 00:01:42,260
+And that is what happens when you're working with something that is not using a pointer.
+
+22
+00:01:42,740 --> 00:01:46,610
+Now, let's compare this to something that does use a pointer.
+
+23
+00:01:47,220 --> 00:01:55,550
+We're going to say dictionary one equals this dictionary and we'll use the value of 11 again, but inside
+
+24
+00:01:56,120 --> 00:01:56,860
+of a dictionary.
+
+25
+00:01:57,200 --> 00:02:03,110
+So when you have something set equal to a dictionary, it is a pointer to the dictionary.
+
+26
+00:02:03,120 --> 00:02:08,360
+You are saying dictionary one points to this dictionary.
+
+27
+00:02:09,400 --> 00:02:13,900
+So if you say dictionary two equals dictionary one.
+
+28
+00:02:14,890 --> 00:02:23,080
+If you did this the same way that we did when just using a number, then it would look like this dictionary
+
+29
+00:02:23,080 --> 00:02:28,360
+too would point to its own dictionary with value of eleven.
+
+30
+00:02:29,020 --> 00:02:32,560
+But that is not what happens when you're using a pointer.
+
+31
+00:02:33,040 --> 00:02:40,840
+When you set dictionary to equal to dictionary one, you are literally saying dictionary to points to
+
+32
+00:02:40,840 --> 00:02:45,550
+the exact same dictionary in memory as dictionary one.
+
+33
+00:02:46,180 --> 00:02:49,720
+So now let's go take a look at this NVS code.
+
+34
+00:02:50,720 --> 00:02:58,160
+OK, so we have a dictionary, one equal to that dictionary with value equal to 11, and then we set
+
+35
+00:02:58,160 --> 00:03:04,220
+dictionary to equal to dictionary one and then here we're going to print all of this out.
+
+36
+00:03:04,230 --> 00:03:05,270
+So let's run this.
+
+37
+00:03:06,620 --> 00:03:12,430
+And before the value is updated, Dictionary one has a valuable 11 dictionary, too, has a valuable
+
+38
+00:03:12,450 --> 00:03:12,770
+luvin.
+
+39
+00:03:13,750 --> 00:03:15,460
+Now, I'm going to paste in some code here.
+
+40
+00:03:16,480 --> 00:03:23,350
+And this is changing the value of dictionary one to 22, so now when we run this.
+
+41
+00:03:25,160 --> 00:03:33,800
+You can see where dictionary one and dictionary to have value of 22, and the reason being is they are
+
+42
+00:03:33,800 --> 00:03:35,900
+both pointing to that same dictionary.
+
+43
+00:03:35,920 --> 00:03:41,400
+If we change dictionary one over here, that's the one the dictionary, too, is pointing to.
+
+44
+00:03:41,420 --> 00:03:42,590
+So what updates that?
+
+45
+00:03:44,490 --> 00:03:46,980
+OK, so let's flip back over.
+
+46
+00:03:48,210 --> 00:03:53,610
+And the value of dictionary one and dictionary to have both changed to 22.
+
+47
+00:03:54,690 --> 00:03:57,040
+So there are a couple of other concepts I want to show here.
+
+48
+00:03:57,060 --> 00:03:59,970
+Let's just say we have another one called Dictionary three.
+
+49
+00:04:00,810 --> 00:04:06,450
+If we set dictionary to equal the dictionary three, we're just going to redirect that pointer down
+
+50
+00:04:06,450 --> 00:04:09,990
+here so these pointers can be redirected like this.
+
+51
+00:04:10,930 --> 00:04:18,520
+And this idea of having a pointer point to a new place is a concept that we're going to use a lot in
+
+52
+00:04:18,520 --> 00:04:19,710
+the data structure section.
+
+53
+00:04:20,230 --> 00:04:23,650
+So that's the first concept that I wanted to talk about there.
+
+54
+00:04:24,220 --> 00:04:25,540
+But there's another concept.
+
+55
+00:04:25,730 --> 00:04:32,050
+In order to explain this, let's set dictionary one equal to dictionary to like this.
+
+56
+00:04:33,920 --> 00:04:40,850
+Now, all of these variables are pointing down here, so now the question is what happens to this dictionary
+
+57
+00:04:41,210 --> 00:04:41,660
+here?
+
+58
+00:04:42,670 --> 00:04:51,280
+The only way you can get to this is through appointer, once you have moved all the pointers away from
+
+59
+00:04:51,280 --> 00:04:54,520
+this, you no longer have a way of getting to it.
+
+60
+00:04:55,660 --> 00:04:58,780
+So what Python will do to free this memory up?
+
+61
+00:04:59,790 --> 00:05:06,870
+With items that are not usable, is it will run a process called garbage collection to remove this.
+
+62
+00:05:08,900 --> 00:05:11,750
+All right, and that is our overview.
+
+63
+00:05:12,850 --> 00:05:13,690
+Of pointers.
